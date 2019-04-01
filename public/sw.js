@@ -85,7 +85,10 @@ self.addEventListener('fetch', function (event) {
           })
           .then(function (data) {
             for (var key in data) {
-              writeData('posts', data[key]);
+              writeData('posts', data[key])
+                .then(function() {
+                  deleteItemFromData('posts', key);
+                });
             }
           });
         return res;
