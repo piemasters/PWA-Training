@@ -1,7 +1,7 @@
 importScripts('/src/js/idb.js');
 importScripts('/src/js/utility.js');
 
-var CACHE_STATIC_NAME = 'static-v24';
+var CACHE_STATIC_NAME = 'static-v28';
 var CACHE_DYNAMIC_NAME = 'dynamic-v2';
 var STATIC_FILES = [
   '/',
@@ -222,10 +222,10 @@ self.addEventListener('sync', function(event) {
 });
 
 self.addEventListener('notificationclick', function(event) {
-    var notification = event.notification;
-    var action = event.action;
+  var notification = event.notification;
+  var action = event.action;
 
-    console.log(notification);
+  console.log(notification);
 
   if (action === 'confirm') {
     console.log('Confirm was chosen');
@@ -252,7 +252,7 @@ self.addEventListener('notificationclick', function(event) {
 });
 
 self.addEventListener('notificationclose', function(event) {
-    console.log('Notification was closed', event);
+  console.log('Notification was closed', event);
 });
 
 self.addEventListener('push', function(event) {
