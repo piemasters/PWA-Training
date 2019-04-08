@@ -23,7 +23,7 @@ exports.storePostData = functions.https.onRequest(function (request, response) {
       image: request.body.image
     })
       .then(function () {
-        webpush.setVapidDetails('web-push-book@gauntface.com', 'BN6r36LRLDYbguP8P6w2eU8eB4jNXrkSV775LI_cDAV3Plip_39CtNLqSbCF4sqkffV0ko-ccvQSm735aUUM1V8', 'aan1n9Q6K9dWFJ5QyzeM1aj3Zr7P_LrufkIIvzwowQs');
+        webpush.setVapidDetails('mailto:business@academind.com', 'BN6r36LRLDYbguP8P6w2eU8eB4jNXrkSV775LI_cDAV3Plip_39CtNLqSbCF4sqkffV0ko-ccvQSm735aUUM1V8', 'aan1n9Q6K9dWFJ5QyzeM1aj3Zr7P_LrufkIIvzwowQs');
         return admin.database().ref('subscriptions').once('value');
       })
       .then(function (subscriptions) {
