@@ -27,8 +27,9 @@ locationBtn.addEventListener('click', function (event) {
   navigator.geolocation.getCurrentPosition(function (position) {
     locationBtn.style.display = 'inline';
     locationLoader.style.display = 'none';
-    fetchedLocation = {lat: position.coords.latitude, lng: 0};
-    locationInput.value = 'In Munich';
+    fetchedLocation = {lat: position.coords.latitude, lng: position.coords.longitude};
+    // TODO: Perform reverse geocoding to get location
+    locationInput.value = fetchedLocation.lat + ',' + fetchedLocation.lng;
     document.querySelector('#manual-location').classList.add('is-focused');
   }, function (err) {
     console.log(err);
