@@ -53,7 +53,7 @@ exports.storePostData = functions.https.onRequest(function(request, response) {
 
     // This callback will be invoked after all uploaded files are saved.
     busboy.on("finish", () => {
-      var bucket = gcs.bucket("YOUR_PROJECT_ID.appspot.com");
+      var bucket = gcs.bucket("pwagram-d7056.appspot.com");
       bucket.upload(
         upload.file,
         {
