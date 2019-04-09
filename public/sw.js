@@ -198,7 +198,7 @@ self.addEventListener('sync', function(event) {
             postData.append('rawLocationLng', dt.rawLocation.lng);
             postData.append('file', dt.picture, dt.id + '.png');
 
-            fetch('https://us-central1-pwagram-99adf.cloudfunctions.net/storePostData', {
+            fetch('https://us-central1-pwagram-d7056.cloudfunctions.net/storePostData', {
               method: 'POST',
               body: postData
             })
