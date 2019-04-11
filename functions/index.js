@@ -71,6 +71,7 @@ exports.storePostData = functions.https.onRequest(function(request, response) {
               .database()
               .ref("posts")
               .push({
+                id: fields.id,
                 title: fields.title,
                 location: fields.location,
                 rawLocation: {
